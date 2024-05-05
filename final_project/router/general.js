@@ -43,10 +43,9 @@ public_users.get('/', (req, res) => {
         return new Promise((resolve,reject) => {
           setTimeout(() => {
             resolve(books);
-          } ,1000);
-        
-        });
-    };
+            ),1000);
+        })
+    }
     getBooks().then((books) => {
         res.json(books);
     }).catch((err) =>{
